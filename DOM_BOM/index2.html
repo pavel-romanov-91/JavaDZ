@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=\, initial-scale=1.0">
+	<title>Document</title>
+
+	<style>
+		body,
+		input {
+			text-align: center;
+		}
+
+		div {
+			padding: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<form onsubmit="getResult(this); return false">
+		Сторона A <input type="text" name="a" /><br>
+		Сторона B <input type="text" name="b" /><br>
+		<input type="submit" value="Рассчитать периметр и площадь" />
+		<div id="result"></div>
+	</form>
+
+</body>
+<script>
+	function getResult(f) {
+		var a = f.a.value * 1, b = f.b.value * 1;
+		document.getElementById('result').innerHTML = 'P = ' + ((a + b) * 2) + '<br>S = ' + (a * b);
+	};
+</script>
+
+</html>
